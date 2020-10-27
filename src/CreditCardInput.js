@@ -182,27 +182,27 @@ export default class CreditCardInput extends Component {
         >
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
-            containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />
+            containerStyle={[s.inputContainer, { width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} />
           <View style={cvvRowStyle}>
             <View style={cvvColStyle}>
               <CCInput {...this._inputProps("expiry")}
                 keyboardType="numeric"
-                containerStyle={[s.inputContainer, inputContainerStyle, { width: EXPIRY_INPUT_WIDTH }, cvvFieldsStyle]} />
+                containerStyle={[s.inputContainer, { width: EXPIRY_INPUT_WIDTH }, inputContainerStyle, cvvFieldsStyle]} />
             </View>
             <View style={cvvColStyle}>
               {requiresCVC &&
                 <CCInput {...this._inputProps("cvc")}
                   keyboardType="numeric"
-                  containerStyle={[s.inputContainer, inputContainerStyle, { width: CVC_INPUT_WIDTH }, cvvFieldsStyle]} />}
+                  containerStyle={[s.inputContainer, { width: CVC_INPUT_WIDTH }, inputContainerStyle, cvvFieldsStyle]} />}
             </View>
           </View>
           {requiresName &&
             <CCInput {...this._inputProps("name")}
-              containerStyle={[s.inputContainer, inputContainerStyle, { width: NAME_INPUT_WIDTH }]} />}
+              containerStyle={[s.inputContainer, { width: NAME_INPUT_WIDTH }, inputContainerStyle]} />}
           {requiresPostalCode &&
             <CCInput {...this._inputProps("postalCode")}
               keyboardType="numeric"
-              containerStyle={[s.inputContainer, inputContainerStyle, { width: POSTAL_CODE_INPUT_WIDTH }]} />}
+              containerStyle={[s.inputContainer, { width: POSTAL_CODE_INPUT_WIDTH }, inputContainerStyle]} />}
         </ScrollView>
       </View>
     );
