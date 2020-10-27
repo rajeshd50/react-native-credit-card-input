@@ -161,10 +161,10 @@ export default class CreditCardInput extends Component {
           expiry={expiry}
           cvc={cvc} />
         <ScrollView ref="Form"
-          horizontal
           keyboardShouldPersistTaps="always"
           scrollEnabled={allowScroll}
           showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
           style={s.form}>
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
