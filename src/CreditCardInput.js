@@ -55,6 +55,9 @@ export default class CreditCardInput extends Component {
     cvvColStyle: PropTypes.object,
     cvvFieldsStyle: PropTypes.object,
 
+    expiryContainerStyle: PropTypes.object,
+    cvvContainerStyle: PropTypes.object,
+
     labelStyle: Text.propTypes.style,
     inputStyle: Text.propTypes.style,
     inputContainerStyle: ViewPropTypes.style,
@@ -157,6 +160,8 @@ export default class CreditCardInput extends Component {
       cvvRowStyle, cvvColStyle,
       cvvFieldsStyle,
       mainFormInnerStyle,
+      expiryContainerStyle,
+      cvvContainerStyle,
     } = this.props;
 
     return (
@@ -184,12 +189,12 @@ export default class CreditCardInput extends Component {
             keyboardType="numeric"
             containerStyle={[s.inputContainer, { width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} />
           <View style={cvvRowStyle}>
-            <View style={cvvColStyle}>
+            <View style={[cvvColStyle, expiryContainerStyle]}>
               <CCInput {...this._inputProps("expiry")}
                 keyboardType="numeric"
                 containerStyle={[s.inputContainer, { width: EXPIRY_INPUT_WIDTH }, inputContainerStyle, cvvFieldsStyle]} />
             </View>
-            <View style={cvvColStyle}>
+            <View style={[cvvColStyle, cvvContainerStyle]}>
               {requiresCVC &&
                 <CCInput {...this._inputProps("cvc")}
                   keyboardType="numeric"

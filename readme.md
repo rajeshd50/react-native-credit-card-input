@@ -112,6 +112,8 @@ LiteCreditCardInput does not support `requiresName`, `requiresCVC`, and `require
 |mainFormInnerStyle | Style | Style for main form scroll view inner container |
 |cvvRowStyle | Style | Style for cvv/expiry row |
 |cvvColStyle | Style | Style for cvv/expiry row col |
+|cvvContainerStyle | Style | Style for cvv row col |
+|expiryContainerStyle | Style | Style for expiry row col |
 |cvvFieldsStyle | Style | Style for cvv/expiry field extra |
 |labelStyle | Text.propTypes.style | Style for credit-card form's labels |
 |inputStyle | Text.propTypes.style | Style for credit-card form's textInput |
