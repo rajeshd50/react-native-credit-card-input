@@ -50,6 +50,7 @@ export default class CreditCardInput extends Component {
 
     mainContainerStyle: PropTypes.object,
     mainFormStyle: PropTypes.object,
+    mainFormInnerStyle: PropTypes.object,
     cvvRowStyle: PropTypes.object,
     cvvColStyle: PropTypes.object,
     cvvFieldsStyle: PropTypes.object,
@@ -155,6 +156,7 @@ export default class CreditCardInput extends Component {
       mainFormStyle,
       cvvRowStyle, cvvColStyle,
       cvvFieldsStyle,
+      mainFormInnerStyle,
     } = this.props;
 
     return (
@@ -175,7 +177,9 @@ export default class CreditCardInput extends Component {
           scrollEnabled={allowScroll}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          style={[s.form, mainFormStyle]}>
+          style={[s.form, mainFormStyle]}
+          contentContainerStyle={mainFormInnerStyle}  
+        >
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />

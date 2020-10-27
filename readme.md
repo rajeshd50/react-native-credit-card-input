@@ -108,7 +108,8 @@ LiteCreditCardInput does not support `requiresName`, `requiresCVC`, and `require
 |cardImageFront | PropTypes.number | Image for the credit-card view `e.g. require("./card.png")` |
 |cardImageBack | PropTypes.number | Image for the credit-card view `e.g. require("./card.png")` |
 |mainContainerStyle | Style | Style for main container |
-|mainFormStyle | Style | Style for main form |
+|mainFormStyle | Style | Style for main form scroll view |
+|mainFormInnerStyle | Style | Style for main form scroll view inner container |
 |cvvRowStyle | Style | Style for cvv/expiry row |
 |cvvColStyle | Style | Style for cvv/expiry row col |
 |cvvFieldsStyle | Style | Style for cvv/expiry field extra |
